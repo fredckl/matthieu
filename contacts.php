@@ -1,7 +1,13 @@
+<?php
+
+$titre = "Suruneligne - Agence de communication";
+
+?>
+
 <!DOCTYPE html>
 <html lang="fr">
   <head>
-    <title>Suruneligne</title>
+    <title><?php echo "$titre" ?></title>
     <meta charset="utf-8">
     <link rel="stylesheet" href="./style.css" type="text/css" media="all">
     <link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet">
@@ -12,12 +18,8 @@
             <img src="./img/logo.png" alt="logo"/>
           </div>
           <div class="menu">
-            <div class="accueil">
-              <a href="./index.html">Accueil</a>
-            </div>
-            <div class="contact">
-              <a href="./contacts.html">Contacts</a>
-            </div>
+            <a class="lien" href="./index.php">Accueil</a>
+            <a class="lien" href="./contacts.php">Contacts</a>
           </div>
     </header>
     <main>
@@ -53,22 +55,15 @@
                   </div>
 
                   <div class="ligne_form">
-                    <input class="textbox long" type="text" placeholder="Votre adresse" name="ad" id="ad" >
+                    <input class="textbox long" type="text" placeholder="Sujet" name="suj" id="suj" >
                     <div class="fin">
                     </div>
                   </div>
 
                   <div class="ligne_form">
-                    <input class="textbox" type="text" placeholder="Votre Code postal" name="cp" id="cp" >
-                    <input class="textbox" type="text" placeholder="Votre ville" name="ville" id="ville">
+                    <input class="textbox long" type="textarea" placeholder="Votre message" name="mes" id="mes" >
                     <div class="fin">
                   </div>
-                  </div>
-
-                  <div class="ligne_form">
-                    <input type="date" id="ddn" name="ddn"/>
-                    <div class="fin">
-                    </div>
                   </div>
 
                 </form>
@@ -77,7 +72,7 @@
                     <input class="bouton" type="submit" Value="Je valide ma demande"></input>
                   </div>
             </div>
-            <div class="blocdroit">
+            <div class="blocdroite">
               <div class="image">
                 <img src="./img/image1.jpg" alt="image 1"/>
                 <img src="./img/image2.jpg" alt="image 2"/>

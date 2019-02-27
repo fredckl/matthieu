@@ -1,10 +1,17 @@
-<!-- JOUR 1 -->
+<!-- JOUR 2 -->
+
+<?php
+
+$titre = "Suruneligne - Agence de communication";
+
+?>
 
 <!DOCTYPE html>
 <html lang="fr">
   <head>
-    <title>Suruneligne</title>
+    <title><?php echo "$titre" ?></title>
     <meta charset="utf-8">
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
     <link rel="stylesheet" href="./style.css" type="text/css" media="all">
     <link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet">
   </head>
@@ -14,12 +21,8 @@
             <img src="./img/logo.png" alt="logo"/>
           </div>
           <div class="menu">
-            <div class="accueil">
-              <a href="./index.html">Accueil</a>
-            </div>
-            <div class="contact">
-              <a href="./contacts.html">Contacts</a>
-            </div>
+              <a class="lien" href="./index.php">Accueil</a>
+              <a class="lien" href="./contacts.php">Contacts</a>
           </div>
     </header>
     <main>
@@ -42,7 +45,7 @@
               Suruneligne c’est des personnes expertes dans leur domaine : impression, stratégie de communication, graphisme, webdesign, développement web et technologies multimédia.</br>
 
             </div>
-            <div class="blocdroit">
+            <div class="blocdroite">
               <div class="image">
                 <img src="./img/image1.jpg" alt="image 1"/>
                 <img src="./img/image2.jpg" alt="image 2"/>
