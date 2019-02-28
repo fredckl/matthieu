@@ -11,19 +11,26 @@ $titre = "Suruneligne - Agence de communication";
   <head>
     <title><?php echo "$titre" ?></title>
     <meta charset="utf-8">
-    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./style.css" type="text/css" media="all">
     <link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
   </head>
   <body>
     <header>
           <div class="logo">
             <img src="./img/logo.png" alt="logo"/>
           </div>
-          <div class="menu">
+          <div class="menu_ouvert">
               <a class="lien" href="./index.php">Accueil</a>
               <a class="lien" href="./contacts.php">Contacts</a>
+              <div class="bouton_fermer"><a href="#"><i class="far fa-times-circle"></i></a></div>
           </div>
+          <div class="menu_fermer">
+              <div class="bouton_menu"><a href="#"><i class="fas fa-bars"></i></a></div>
+          </div>
+          <script src="./js/jquery.js"></script>
+          <script src="./js/menu.js"></script>
     </header>
     <main>
           <div class="blochaut">

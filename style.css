@@ -20,16 +20,17 @@ header
   width:auto;
   height:100%;
 }
-.menu
-{ display:inline-flex;
-  width:30%;
-  height:200px;
+.menu_ouvert
+{ display:none;
+  width:35%;
+  height:75px;
   justify-content: center;
   align-items:center;
   position:absolute;
-  right:0px;
+  right:50px;
+  top:100px;
 }
-.menu .lien {
+.menu_ouvert .lien {
   display:inline-flex;
   text-decoration:none;
   color:#838383;
@@ -40,20 +41,47 @@ header
   padding:10px 20px;
   margin:0px 30px;
 }
-.menu .lien:hover {
+.menu_ouvert .lien:hover {
   color:#ffffff;
   background-color:#838383;
 }
 
-.menu > div:hover
+.menu_ouvert > div:hover
 { border:2px solid #ffffff;
 }
-.menu > div > a:hover
+.menu_ouvert > div > a:hover
 { background-color:#838383;
   color:#ffffff;
 }
-.menu > div:first-child
+.menu_ouvert > div:first-child
 { margin-left:-5%;
+}
+.menu_fermer {
+  display:inline-flex;
+  width:2%;
+  height:50px;
+  justify-content: flex-end;
+  align-items:center;
+  position:absolute;
+  right:0px;
+  top:100px;
+}
+.bouton_menu {
+  color:#838383;
+  font-size:25px;
+  font-family: 'PT Sans', sans-serif;
+  text-decoration:none;
+}
+i {
+  color:#838383;
+}
+.bouton_fermer {
+  display:inline-block;
+  color:#838383;
+  font-size:25px;
+  font-family: 'PT Sans', sans-serif;
+  text-decoration:none;
+
 }
 
 /* css de la zone main */
@@ -99,22 +127,19 @@ main
 }
 h1
 { display:block;
-  height:20px;
   margin:10px 0px 0px 0px;
   color:#545252;
   font-family: 'PT Sans', sans-serif;
 }
 h2
 { display:block;
-  height:20px;
   width:100%;
-  margin-top:75px;
+  margin-top:25px;
   color:#1e99b3;
   font-family: 'PT Sans', sans-serif;
 }
 h3
 { display:block;
-  height:20px;
   width:100%;
   color:#1e99b3;
   font-family: 'PT Sans', sans-serif;
@@ -150,19 +175,15 @@ h3
   padding : 10px;
   color : #666;
   width:100%;
-  height:330px;
+  font-family: 'PT Sans', sans-serif;
 }
 #formulaire .textbox
 { color: black;
-  font-family: Arial;
   font-size: 16px;
   height: 32px;
   padding:8px 0px 6px 10px;
-  vertical-align: middle;
   width: 31.3%;
   margin-top:10px;
-  margin-right:3%;
-  float: left;
   font-family: 'PT Sans', sans-serif;
   border:1px solid #5e5e5e;
 }
@@ -197,13 +218,19 @@ input#mes.textbox.long {
 .ligne_bouton
 { width:100%;
 }
-/* css de la zone formulaire */
-@media (max-width:1460px) {
+#formulaire .ligne_form textarea {
+  height:75px;
+}
+/* css de la zone @media */
+@media (min-height:1101px) and (max-width:1460px) {
   header {
     width:950px;
   }
   main {
     width:1000px;
+  }
+  .menu_ouvert {
+    width:45%;
   }
   .blochaut {
     height:300px;
@@ -219,12 +246,17 @@ input#mes.textbox.long {
     margin-bottom:30px;
   }
 }
-@media (max-width:1100px) {
+@media (min-height:751px) and (max-width:1100px) {
   header {
     width:650px;
   }
-  .menu {
+  .menu_ouvert {
+    width:50%;
     right:50px;
+  }
+  .menu_ouvert .lien {
+    font-size:20px;
+    margin:0 15px;
   }
   main {
     width:700px;
@@ -256,15 +288,27 @@ input#mes.textbox.long {
   header {
     width:100%;
   }
-  .menu {
+  .menu_ouvert {
     flex-wrap:wrap;
-    right:30px;
+    right:25%;
+    top:10px;
+    width:20%;
   }
   .logo {
     margin-left:10%;
   }
-  .lien {
-    width:70%;
+  .logo > img {
+    height:75%;
+  }
+  .menu_ouvert .lien {
+    font-size:20px;
+    margin:10px 0px;
+  }
+  .bouton_menu {
+    margin-right:20px;
+  }
+  .bouton_fermer {
+    margin-left:45px;
   }
   main {
     width:100%;
@@ -278,23 +322,40 @@ input#mes.textbox.long {
   }
   .blocgauche {
     width:100%;
-    margin-left:25%;
-    margin-right:25%;
+    margin-right:0px;
+  }
+  .blocgauche > p{
+  font-size:18px;
   }
   #formulaire {
     margin-top:10px;
-    width:350px;
+  }
+  #formulaire .ligne_form input {
+    width:100%;
+  }
+  #formulaire .ligne_form:first-child input {
+    width:10%;
+  }
+  #formulaire .textbox.long {
+    width:100%;
+  }
+  textarea {
+    width:100%;
   }
   .bouton {
-    margin-top:30px;
     margin-bottom:50px;
-    width:70%;
+    width:100%;
   }
   .blocdroite {
-    width:80%;
-    margin:0px auto;
+    width:100%;
+    margin-top:50px;
   }
   .image {
-    margin:15px 25% ;
+    width:90%;
+    height:auto;
+    margin:auto;
+  }
+  .image > img {
+    margin-bottom:30px;
   }
 }
