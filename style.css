@@ -21,13 +21,12 @@ header
   height:100%;
 }
 .menu_ouvert
-{ display:none;
-  width:35%;
+{ display:block;
   height:75px;
   justify-content: center;
   align-items:center;
   position:absolute;
-  right:50px;
+  right:0px;
   top:100px;
 }
 .menu_ouvert .lien {
@@ -67,6 +66,7 @@ header
   top:100px;
 }
 .bouton_menu {
+  display:none;
   color:#838383;
   font-size:25px;
   font-family: 'PT Sans', sans-serif;
@@ -155,7 +155,7 @@ h3
 { display:inline-flex;
   width:24%;
 }
-.image > img
+.image > a
 { display:flex;
   margin-bottom:15px;
   width:100%;
@@ -171,10 +171,11 @@ h3
 }
 
 #formulaire
-{ margin-top : -50px;
+{ margin-top : -130px;
   padding : 10px;
   color : #666;
   width:100%;
+  height:200px;
   font-family: 'PT Sans', sans-serif;
 }
 #formulaire .textbox
@@ -212,14 +213,14 @@ h3
   color : white;
   font-size:15px;
 }
-input#mes.textbox.long {
+input#message.textbox.long {
   height:150px;
 }
 .ligne_bouton
 { width:100%;
 }
 #formulaire .ligne_form textarea {
-  height:75px;
+  height:100px;
 }
 /* css de la zone @media */
 @media (min-height:1101px) and (max-width:1460px) {
@@ -229,20 +230,17 @@ input#mes.textbox.long {
   main {
     width:1000px;
   }
-  .menu_ouvert {
-    width:45%;
-  }
   .blochaut {
     height:300px;
   }
   .blocgauche {
-    width:60%;
+    width:58.5%;
     margin-right:115px;
   }
   .blocdroite {
     width:29%;
   }
-  .image > img {
+  .image > a {
     margin-bottom:30px;
   }
 }
@@ -251,8 +249,7 @@ input#mes.textbox.long {
     width:650px;
   }
   .menu_ouvert {
-    width:50%;
-    right:50px;
+    display:block;
   }
   .menu_ouvert .lien {
     font-size:20px;
@@ -265,7 +262,7 @@ input#mes.textbox.long {
     height:200px;
   }
   .blocgauche {
-    width:68%;
+    width:50%;
     margin-right:50px;
   }
   .blocgauche p {
@@ -274,11 +271,15 @@ input#mes.textbox.long {
   .blocdroite {
     width:29%;
   }
-  .image > img {
+  .image > a {
     margin-bottom:50px;
   }
-  input#mes.textbox.long {
-  height:100px;
+  #formulaire {
+    margin-top:-50px;
+    height:310px;
+  }
+  input#message.textbox.long {
+    height:100px;
   }
   .bouton {
     width:42%;
@@ -289,6 +290,7 @@ input#mes.textbox.long {
     width:100%;
   }
   .menu_ouvert {
+    display:none;
     flex-wrap:wrap;
     right:25%;
     top:10px;
@@ -303,9 +305,15 @@ input#mes.textbox.long {
   .menu_ouvert .lien {
     font-size:20px;
     margin:10px 0px;
+    width:80%;
+    justify-content: center;
   }
   .bouton_menu {
+    display:block;
     margin-right:20px;
+  }
+  .menu_fermer {
+    top:20px;
   }
   .bouton_fermer {
     margin-left:45px;
@@ -325,10 +333,12 @@ input#mes.textbox.long {
     margin-right:0px;
   }
   .blocgauche > p{
-  font-size:18px;
+    font-size:18px;
   }
   #formulaire {
     margin-top:10px;
+    margin-left:-10px;
+    height:auto;
   }
   #formulaire .ligne_form input {
     width:100%;
@@ -355,7 +365,102 @@ input#mes.textbox.long {
     height:auto;
     margin:auto;
   }
-  .image > img {
+  .image > a {
     margin-bottom:30px;
   }
+  img.miniature {
+    width:100%;
+    height:auto;
+  }
+  #zoom1 {
+    display:none;
+  }
+  #zoom1:target {
+    display:none;
+  }
+  #zoom2 {
+    display:none;
+  }
+  #zoom2:target {
+    display:none;
+  }
+  #zone3 {
+    display:none;
+  }
+  #zoom3:target {
+    display:none;
+  }
+}
+
+
+/* Mise en forme image en plein écran */
+
+#zoom1 {
+  position:absolute;
+  top:20%;
+  left:25%;
+  height:50%;
+  width:50%;
+  z-index: 100;
+  text-align:center;
+  opacity:0;
+  pointer-events: none;
+}
+#zoom2 {
+  position:absolute;
+  top:20%;
+  left:25%;
+  height:50%;
+  width:50%;
+  z-index: 100;
+  text-align:center;
+  opacity:0;
+  pointer-events: none;
+}
+#zoom3 {
+  position:absolute;
+  top:20%;
+  left:25%;
+  height:50%;
+  width:50%;
+  z-index: 100;
+  text-align:center;
+  opacity:0;
+  pointer-events: none;
+}
+#zoom1:target {
+  opacity:1;
+  pointer-events: auto;
+}
+#zoom2:target {
+  opacity:1;
+  pointer-events: auto;
+}
+#zoom3:target {
+  opacity:1;
+  pointer-events: auto;
+}
+#zoom1 > img
+{ width:100%;
+  height:auto;
+}
+#zoom2 > img
+{ width:100%;
+  height:auto;
+}
+#zoom3 > img
+{ width:100%;
+  height:auto;
+}
+.fa-window-close
+{ position:absolute;
+  right:30px;
+  top:30px;
+  font-size:30px;
+  color:#ffffff;
+  background-color:#545252;
+  width:50px;
+  height:30px;
+  padding:10px 0;
+  border-radius:10px;
 }

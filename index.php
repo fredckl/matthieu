@@ -24,13 +24,12 @@ $titre = "Suruneligne - Agence de communication";
           <div class="menu_ouvert">
               <a class="lien" href="./index.php">Accueil</a>
               <a class="lien" href="./contacts.php">Contacts</a>
-              <div class="bouton_fermer"><a href="#"><i class="far fa-times-circle"></i></a></div>
+              <div class="bouton_fermer"><a href="#"></a></div>
           </div>
           <div class="menu_fermer">
               <div class="bouton_menu"><a href="#"><i class="fas fa-bars"></i></a></div>
           </div>
-          <script src="./js/jquery.js"></script>
-          <script src="./js/menu.js"></script>
+
     </header>
     <main>
           <div class="blochaut">
@@ -54,11 +53,26 @@ $titre = "Suruneligne - Agence de communication";
             </div>
             <div class="blocdroite">
               <div class="image">
-                <img src="./img/image1.jpg" alt="image 1"/>
-                <img src="./img/image2.jpg" alt="image 2"/>
-                <img src="./img/image3.jpg" alt="image 3"/>
+                <a href="#zoom1"><img class="miniature" src="./img/image1.jpg" alt="image 1" /></a>
+                    <div id="zoom1">
+                        <img alt="image1" src="./img/image1.jpg">
+                        <a href="./index.php"><i class="far fa-window-close"></i></a>
+                    </div>
+                <a href="#zoom2"><img class="miniature" src="./img/image2.jpg" alt="image 2" /></a>
+                    <div id="zoom2">
+                        <img alt="image2" src="./img/image2.jpg">
+                        <a href="./index.php"><i class="far fa-window-close"></i></a>
+                    </div>
+                <a href="#zoom3"><img class="miniature" src="./img/image3.jpg" alt="image 3" /></a>
+                    <div id="zoom3">
+                        <img alt="image3" src="./img/image3.jpg">
+                        <a href="./index.php"><i class="far fa-window-close"></i></a>
+                    </div>
             </div>
           </div>
     </main>
+
+    <script src="./js/jquery.js"></script>
+    <script src="./js/menu.js"></script>
   </body>
 </html>
