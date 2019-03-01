@@ -29,6 +29,8 @@ header
   right:0px;
   top:100px;
 }
+
+
 .menu_ouvert .lien {
   display:inline-flex;
   text-decoration:none;
@@ -296,6 +298,9 @@ input#message.textbox.long {
     top:10px;
     width:20%;
   }
+  .menu-show {
+    display: block;
+  }
   .logo {
     margin-left:10%;
   }
@@ -372,95 +377,4 @@ input#message.textbox.long {
     width:100%;
     height:auto;
   }
-  #zoom1 {
-    display:none;
-  }
-  #zoom1:target {
-    display:none;
-  }
-  #zoom2 {
-    display:none;
-  }
-  #zoom2:target {
-    display:none;
-  }
-  #zone3 {
-    display:none;
-  }
-  #zoom3:target {
-    display:none;
-  }
-}
-
-
-/* Mise en forme image en plein écran */
-
-#zoom1 {
-  position:absolute;
-  top:20%;
-  left:25%;
-  height:50%;
-  width:50%;
-  z-index: 100;
-  text-align:center;
-  opacity:0;
-  pointer-events: none;
-}
-#zoom2 {
-  position:absolute;
-  top:20%;
-  left:25%;
-  height:50%;
-  width:50%;
-  z-index: 100;
-  text-align:center;
-  opacity:0;
-  pointer-events: none;
-}
-#zoom3 {
-  position:absolute;
-  top:20%;
-  left:25%;
-  height:50%;
-  width:50%;
-  z-index: 100;
-  text-align:center;
-  opacity:0;
-  pointer-events: none;
-}
-#zoom1:target {
-  opacity:1;
-  pointer-events: auto;
-}
-#zoom2:target {
-  opacity:1;
-  pointer-events: auto;
-}
-#zoom3:target {
-  opacity:1;
-  pointer-events: auto;
-}
-#zoom1 > img
-{ width:100%;
-  height:auto;
-}
-#zoom2 > img
-{ width:100%;
-  height:auto;
-}
-#zoom3 > img
-{ width:100%;
-  height:auto;
-}
-.fa-window-close
-{ position:absolute;
-  right:30px;
-  top:30px;
-  font-size:30px;
-  color:#ffffff;
-  background-color:#545252;
-  width:50px;
-  height:30px;
-  padding:10px 0;
-  border-radius:10px;
 }

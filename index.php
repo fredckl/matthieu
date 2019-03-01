@@ -1,4 +1,4 @@
-<!-- JOUR 4 -->
+<!-- JOUR 5 -->
 
 <?php
 
@@ -15,6 +15,7 @@ $titre = "Suruneligne - Agence de communication";
     <link rel="stylesheet" href="./style.css" type="text/css" media="all">
     <link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <link href="./dist/css/lightbox.css" rel="stylesheet">
   </head>
   <body>
     <header>
@@ -53,26 +54,16 @@ $titre = "Suruneligne - Agence de communication";
             </div>
             <div class="blocdroite">
               <div class="image">
-                <a href="#zoom1"><img class="miniature" src="./img/image1.jpg" alt="image 1" /></a>
-                    <div id="zoom1">
-                        <img alt="image1" src="./img/image1.jpg">
-                        <a href="./index.php"><i class="far fa-window-close"></i></a>
-                    </div>
-                <a href="#zoom2"><img class="miniature" src="./img/image2.jpg" alt="image 2" /></a>
-                    <div id="zoom2">
-                        <img alt="image2" src="./img/image2.jpg">
-                        <a href="./index.php"><i class="far fa-window-close"></i></a>
-                    </div>
-                <a href="#zoom3"><img class="miniature" src="./img/image3.jpg" alt="image 3" /></a>
-                    <div id="zoom3">
-                        <img alt="image3" src="./img/image3.jpg">
-                        <a href="./index.php"><i class="far fa-window-close"></i></a>
-                    </div>
+
+                <a href="./img/image1.jpg" data-lightbox="roadtrip" data-title="Image Suruneligne"><img src="./img/image1.jpg" alt="image 1" /></a>
+                <a href="./img/image2.jpg" data-lightbox="roadtrip" data-title="Image Suruneligne"><img src="./img/image2.jpg" alt="image 2" /></a>
+                <a href="./img/image3.jpg" data-lightbox="roadtrip" data-title="Image Suruneligne"><img src="./img/image3.jpg" alt="image 3" /></a>
             </div>
           </div>
     </main>
 
     <script src="./js/jquery.js"></script>
     <script src="./js/menu.js"></script>
+    <script src="./dist/js/lightbox.js"></script>
   </body>
 </html>

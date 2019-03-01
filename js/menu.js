@@ -5,7 +5,7 @@ jQuery(document).ready(function() {
     $('.bouton_menu').click (function () {
 
       if ($menuOuvert.is(':visible')){
-        $menuOuvert.hide()
+        $menuOuvert.removeClass('menu-show')
 
         $btnToggleMenu
         .find('i')
@@ -13,7 +13,7 @@ jQuery(document).ready(function() {
         .addClass('fa-bars')
 
       } else {
-        $menuOuvert.show()
+        $menuOuvert.addClass('menu-show')
 
         $btnToggleMenu
         .find('i')
