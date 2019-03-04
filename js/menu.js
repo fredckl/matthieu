@@ -2,7 +2,8 @@ jQuery(document).ready(function() {
 
   var $menuOuvert = $('.menu_ouvert');
   var $btnToggleMenu = $('.bouton_menu');
-    $('.bouton_menu').click (function () {
+    $('.bouton_menu').click (function (event) {
+      event.preventDefault();
 
       if ($menuOuvert.is(':visible')){
         $menuOuvert.removeClass('menu-show')

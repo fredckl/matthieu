@@ -4,36 +4,46 @@
 
 $titre = "Suruneligne - Agence de communication";
 
+/*
+$images = [
+  [ 'src' => './img/image1.jpg',
+    'grp' => 'roadtrip',
+    'title' => 'Web & Digital',
+  ],
+  [ 'src' => './img/image2.jpg',
+    'grp' => 'roadtrip',
+    'title' => 'Evenementiel & Signalétique',
+  ],
+  [ 'src' => './img/image3.jpg',
+    'grp' => 'roadtrip',
+    'title' => 'Graphisme & Print',
+  ],
+];
+*/
+
+
+$path = './img/img_random/'; // Chemin vers le dossier contenant tes images (ne pas oublier le slash final)
+$tab = scandir($path); // Place les images dans un tableau
+$tab = array_slice($tab, 2);
+shuffle($tab); // Mélange le tableau
+$tab = array_slice($tab, 0, 3); // Garde les 3 premières images
+
+
 ?>
 
 <!DOCTYPE html>
 <html lang="fr">
-  <head>
-    <title><?php echo "$titre" ?></title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./style.css" type="text/css" media="all">
-    <link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-    <link href="./dist/css/lightbox.css" rel="stylesheet">
-  </head>
-  <body>
-    <header>
-          <div class="logo">
-            <img src="./img/logo.png" alt="logo"/>
-          </div>
-          <div class="menu_ouvert">
-              <a class="lien" href="./index.php">Accueil</a>
-              <a class="lien" href="./contacts.php">Contacts</a>
-              <div class="bouton_fermer"><a href="#"></a></div>
-          </div>
-          <div class="menu_fermer">
-              <div class="bouton_menu"><a href="#"><i class="fas fa-bars"></i></a></div>
-          </div>
 
-    </header>
+  <?php include './inc/head.inc.php' ?>
+
+  <body>
+
+    <?php include './inc/header.inc.php' ?>
+
     <main>
           <div class="blochaut">
+            <img src="./img/imgcom.gif" alt="image communication"/>
+            <img src="./img/imgcom.gif" alt="image communication"/>
             <img src="./img/imgcom.gif" alt="image communication"/>
           </div>
           <div class="blocbas">
@@ -53,17 +63,15 @@ $titre = "Suruneligne - Agence de communication";
 
             </div>
             <div class="blocdroite">
-              <div class="image">
-
-                <a href="./img/image1.jpg" data-lightbox="roadtrip" data-title="Image Suruneligne"><img src="./img/image1.jpg" alt="image 1" /></a>
-                <a href="./img/image2.jpg" data-lightbox="roadtrip" data-title="Image Suruneligne"><img src="./img/image2.jpg" alt="image 2" /></a>
-                <a href="./img/image3.jpg" data-lightbox="roadtrip" data-title="Image Suruneligne"><img src="./img/image3.jpg" alt="image 3" /></a>
+                <?php echo '<div class="image">';
+                  foreach($tab as $img)
+                  echo '<a href="'.$path.$img.'" data-lightbox="roadtrip" data-title="Image Suruneligne"><img src="'.$path.$img.'" alt="Image Suruneligne" /></a>';
+                  echo '</div>';
+                ?>
             </div>
-          </div>
     </main>
 
-    <script src="./js/jquery.js"></script>
-    <script src="./js/menu.js"></script>
-    <script src="./dist/js/lightbox.js"></script>
+    <?php include './inc/script.inc.php' ?>
+
   </body>
 </html>

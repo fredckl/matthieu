@@ -29,8 +29,6 @@ header
   right:0px;
   top:100px;
 }
-
-
 .menu_ouvert .lien {
   display:inline-flex;
   text-decoration:none;
@@ -104,16 +102,19 @@ main
         justify-content:center;
         margin-top:75px;
         overflow: hidden;
-        background-image: url(./img/imgcom.gif);
         background-size: cover;
         background-repeat: no-repeat;
-        background-position: center
+        background-position: center;
       }
       .blochaut > img {
-        width:55%;
-        height:400px;
-        display:none;
+        width:100%;
+        height:auto;
+        display:flex;
       }
+      div.blochaut.slick-initialized.slick-slider {
+        display:flex;
+      }
+
       /* - - - - - - - - - - - - - - - - - - - - - - - - - - */
 
 .blocbas
@@ -328,7 +329,6 @@ input#message.textbox.long {
   }
   .blochaut {
     display:none;
-    word-wrap:break-word;
   }
   .blocbas {
     flex-wrap:wrap;
@@ -372,6 +372,9 @@ input#message.textbox.long {
   }
   .image > a {
     margin-bottom:30px;
+  }
+  .image > a > img {
+    width:100%;
   }
   img.miniature {
     width:100%;
