@@ -2,38 +2,21 @@
 
 $titre = "Suruneligne - Agence de communication";
 
-/*
-$images = [
-  [ 'src' => './img/image1.jpg',
-    'grp' => 'roadtrip',
-    'title' => 'Web & Digital',
-  ],
-  [ 'src' => './img/image2.jpg',
-    'grp' => 'roadtrip',
-    'title' => 'Evenementiel & Signalétique',
-  ],
-  [ 'src' => './img/image3.jpg',
-    'grp' => 'roadtrip',
-    'title' => 'Graphisme & Print',
-  ],
-];
-*/
-
-
-$path = './img/img_random/'; // Chemin vers le dossier contenant tes images (ne pas oublier le slash final)
-$tab = scandir($path); // Place les images dans un tableau
-$tab = array_slice($tab, 2);
-shuffle($tab); // Mélange le tableau
-$tab = array_slice($tab, 0, 3); // Garde les 6 premières images
-
-
-
 ?>
+
+<?php include './inc/images.inc.php' ?>
 
 <!DOCTYPE html>
 <html lang="fr">
 
   <?php include './inc/head.inc.php' ?>
+
+  <style>
+    .menu_ouvert a:nth-child(2) {
+      background-color:#21a1bc;
+      color:#707070;
+    }
+  </style>
 
   <body>
 
@@ -48,7 +31,7 @@ $tab = array_slice($tab, 0, 3); // Garde les 6 premières images
               <div id="formulaire">
                 <form action="#" method="post">
                   <div class="ligne_form">
-                      <label id="etiqboutonsradio" for="civilite">Civilité : </label>
+                      <label id="civilite" for="civilite">Civilité : </label>
                       <div id="boutonsradio">
                         <input value="Madame" type="radio" id="civilite_madame" name="civilite" checked="checked">
                         <label for="civilite_madame">Madame</label>
@@ -79,16 +62,14 @@ $tab = array_slice($tab, 0, 3); // Garde les 6 premières images
                 </form>
               </div>
               <div class="ligne_bouton">
-                    <input class="bouton" type="submit" Value="Je valide ma demande"></input>
+                    <input class="bouton" type="submit" Value="Je valide ma demande" >
               </div>
             </div>
-            <div class="blocdroite">
-                <?php echo '<div class="image">';
-                  foreach($tab as $img)
-                  echo '<a href="'.$path.$img.'" data-lightbox="roadtrip" data-title="Image Suruneligne"><img src="'.$path.$img.'" alt="Image Suruneligne" /></a>';
-                  echo '</div>';
-                ?>
-            </div>
+
+            <?php include './inc/blocdroite.inc.php' ?>
+
+          </div>
+
     </main>
 
     <?php include './inc/script.inc.php' ?>

@@ -93,6 +93,7 @@ main
 }
 
       /*css du bloc haut -> Uniquement pour la page d'accueil*/
+
       .blochaut
       { display:flex;
         width: 100%;
@@ -111,7 +112,24 @@ main
         height:auto;
         display:flex;
       }
+
       div.blochaut.slick-initialized.slick-slider {
+        display:flex;
+        width: 100%;
+        margin: auto;
+        height:400px;
+        align-items:center;
+        justify-content:center;
+        margin-top:75px;
+        overflow: hidden;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+      }
+
+      div.blochaut.slick-initialized.slick-slider > img {
+        width:100%;
+        height:auto;
         display:flex;
       }
 
@@ -163,6 +181,12 @@ h3
   margin-bottom:15px;
   width:100%;
   height:auto;
+}
+.image > p {
+  font-size:18px;
+  color:#5e5e5e;
+  font-family: 'PT Sans', sans-serif;
+  text-align:center;
 }
 
 /* css de la zone formulaire */
@@ -225,6 +249,7 @@ input#message.textbox.long {
 #formulaire .ligne_form textarea {
   height:100px;
 }
+
 /* css de la zone @media */
 @media (min-height:1101px) and (max-width:1460px) {
   header {
@@ -233,7 +258,10 @@ input#message.textbox.long {
   main {
     width:1000px;
   }
-  .blochaut {
+  /*.blochaut {
+    height:300px;
+  }*/
+  div.blochaut.slick-initialized.slick-slider {
     height:300px;
   }
   .blocgauche {
@@ -261,7 +289,10 @@ input#message.textbox.long {
   main {
     width:700px;
   }
-  .blochaut {
+  /*.blochaut {
+    height:200px;
+  }*/
+  div.blochaut.slick-initialized.slick-slider {
     height:200px;
   }
   .blocgauche {
@@ -327,7 +358,10 @@ input#message.textbox.long {
   main {
     width:100%;
   }
-  .blochaut {
+  /*.blochaut {
+    display:none;
+  }*/
+  div.blochaut.slick-initialized.slick-slider {
     display:none;
   }
   .blocbas {
