@@ -9,7 +9,7 @@ $nb_images_miniature = 14;
 // Pour choisir le nombre d'image qu'on l'on souhaite dans la bannière
 $nb_images_bannieres = 3;
 
-$page = 'index';
+$page = 'notre-travail';
 
 ?>
 

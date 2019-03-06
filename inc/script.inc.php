@@ -10,3 +10,8 @@
     $('.blochaut').slick();
   });
 </script>
+<script>
+    lightbox.option({
+      'albumLabel': "Image %1 de %2"
+    })
+</script>

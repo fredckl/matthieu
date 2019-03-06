@@ -7,7 +7,7 @@ $nb_images_miniature = 3;
 // Pour choisir le nombre d'image qu'on l'on souhaite dans la bannière
 $nb_images_bannieres = 3;
 
-$x = 'b';
+$page = 'contact';
 
 ?>
 

@@ -15,10 +15,16 @@
 
     <!-- Codage permettant d'avoir une couleur personnalisée lorsque l'on est sur la page concernée -->
     <?php
-        if ($x === 'a') {
+        if ($page === 'index') {
             include './inc/cssongleta.inc.php';
-        } else {
+        };
+        if ($page === 'contact') {
             include './inc/cssongletb.inc.php';
-        }
+        };
+        if ($page === 'notre-travail') {
+            include './inc/cssongletc.inc.php';
+        };
+
+
     ?>
   </head>
