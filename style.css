@@ -50,7 +50,6 @@ header
 }
 .menu_ouvert > div > a:hover
 { background-color:#838383;
-  color:#ffffff;
 }
 .menu_ouvert > div:first-child
 { margin-left:-5%;
@@ -141,8 +140,7 @@ main
   margin-top:75px;
 }
 .blocgauche
-{ display:inline-flex;
-  width:75%;
+{ width:75%;
   margin-right:175px;
   flex-wrap:wrap;
 }
@@ -178,7 +176,6 @@ h3
 }
 .image > a
 { display:flex;
-  margin-bottom:15px;
   width:100%;
   height:auto;
 }
@@ -187,6 +184,8 @@ h3
   color:#5e5e5e;
   font-family: 'PT Sans', sans-serif;
   text-align:center;
+  margin-top:5px;
+  margin-bottom:25px;
 }
 
 /* css de la zone formulaire */
@@ -198,11 +197,10 @@ h3
 }
 
 #formulaire
-{ margin-top : -130px;
+{ margin-top : 10px;
   padding : 10px;
   color : #666;
   width:100%;
-  height:200px;
   font-family: 'PT Sans', sans-serif;
 }
 #formulaire .textbox
@@ -212,6 +210,8 @@ h3
   padding:8px 0px 6px 10px;
   width: 31.3%;
   margin-top:10px;
+  margin-right:27px;
+  margin-left:-6px;
   font-family: 'PT Sans', sans-serif;
   border:1px solid #5e5e5e;
 }
@@ -249,6 +249,9 @@ input#message.textbox.long {
 #formulaire .ligne_form textarea {
   height:100px;
 }
+.ligne_bouton + h1 {
+  margin-top:40px;
+}
 
 /* css de la zone @media */
 @media (min-height:1101px) and (max-width:1460px) {
@@ -268,11 +271,11 @@ input#message.textbox.long {
     width:58.5%;
     margin-right:115px;
   }
+  #formulaire .textbox
+  { margin-right:14px;
+  }
   .blocdroite {
     width:29%;
-  }
-  .image > a {
-    margin-bottom:30px;
   }
 }
 @media (min-height:751px) and (max-width:1100px) {
@@ -289,9 +292,6 @@ input#message.textbox.long {
   main {
     width:700px;
   }
-  /*.blochaut {
-    height:200px;
-  }*/
   div.blochaut.slick-initialized.slick-slider {
     height:200px;
   }
@@ -302,21 +302,17 @@ input#message.textbox.long {
   .blocgauche p {
     font-size:15px;
   }
+  #formulaire .textbox
+  { margin-right:4px;
+  }
   .blocdroite {
     width:29%;
-  }
-  .image > a {
-    margin-bottom:50px;
-  }
-  #formulaire {
-    margin-top:-50px;
-    height:310px;
   }
   input#message.textbox.long {
     height:100px;
   }
   .bouton {
-    width:42%;
+    width:60%;
   }
 }
 @media (max-width:750px) {
@@ -388,12 +384,25 @@ input#message.textbox.long {
   #formulaire .textbox.long {
     width:100%;
   }
+  #formulaire .textbox
+  { margin-right:0px;
+  }
   textarea {
     width:100%;
   }
   .bouton {
     margin-bottom:50px;
     width:100%;
+  }
+  .ligne_bouton + h1 {
+    margin-top:0px;
+    text-align:center;
+  }
+  .ligne_bouton + h1 + h3 {
+    text-align:center;
+  }
+  .ligne_bouton + h1 + h3 + p {
+    text-align:center;
   }
   .blocdroite {
     width:100%;
@@ -403,9 +412,6 @@ input#message.textbox.long {
     width:90%;
     height:auto;
     margin:auto;
-  }
-  .image > a {
-    margin-bottom:30px;
   }
   .image > a > img {
     width:100%;

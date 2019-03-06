@@ -1,5 +1,6 @@
 <?php
 
+//données images miniature
 $images = [
   [ 'src' => './img/img_image_bloc_droite/petit_format/image1_petitformat.png',
     'lbox' => './img/img_image_bloc_droite/grand_format/image1_grandformat.png',
@@ -33,17 +34,13 @@ $images = [
   ],
 ];
 
-//$path = './img/img_random/'; // Chemin vers le dossier contenant tes images (ne pas oublier le slash final)
-//$tab = scandir($path); // Place les images dans un tableau
-
-$images = array_slice($images, 0);
+// Codage permettant de mélanger les images du tableau ci-desssus et de les renvoyer dans l'ordre aléatoire sur les pages
 shuffle($images); // Mélange le tableau
-$images = array_slice($images, 0, 3); // Garde les 3 premières images
+$images = array_slice($images, 0, $nb_images_miniature); // Garde les 3 premières images
 
-?>
 
-<?php
 
+//données images bannieres
 $bannieres = [
   [ 'src' => './img/banniere_accueil/image_banniere1.png',
     'grp' => 'banniere',
@@ -57,11 +54,15 @@ $bannieres = [
     'grp' => 'banniere',
     'title' => 'Image Communication 3',
   ],
+  [ 'src' => './img/banniere_accueil/image_banniere4.png',
+    'grp' => 'banniere',
+    'title' => 'Image Communication 4',
+  ],
 ];
 
-$bannieres = array_slice($bannieres, 0);
+// Codage permettant de mélanger les images du tableau ci-desssus et de les renvoyer dans l'ordre aléatoire sur la bannière
 shuffle($bannieres); // Mélange le tableau
-$bannieres = array_slice($bannieres, 0, 3); // Garde les 3 premières images
+$bannieres = array_slice($bannieres, 0, $nb_images_bannieres); // Garde les 3 premières images
 
 ?>
 

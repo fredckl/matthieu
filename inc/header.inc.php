@@ -1,3 +1,5 @@
+<!-- Balise header des pages -->
+
 <header>
       <div class="logo">
         <img src="./img/logo.png" alt="logo"/>
