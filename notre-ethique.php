@@ -1,11 +1,10 @@
-<!-- JOUR 6 -->
-
 <?php
 
 $titre = "Suruneligne - Agence de communication";
 
 
 include __DIR__. '/inc/bootstrap.php';
+
 ?>
 
 <?php include './inc/images.inc.php' ?>
@@ -29,14 +28,12 @@ include __DIR__. '/inc/bootstrap.php';
           <div class="blocbas">
             <div class="blocgauche">
               <!-- Textes descriptifs -->
-              <h1>Notre travail</h1>
-              <h3>Création graphique, impression</h3>
-              <p>Conception et réalisation de vos supports hors médias. De la création à la production, suruneligne travaille avec vous sur toutes les étapes de votre projet.</p>
-              <h3>Création de sites web</h3>
-              <p>Conception, webdesign, modélisation, développement (PHP, MySql, Jquery...), desktop, tablette et smartphone.<br />
-              De l'idée à la mise en ligne, suruneligne vous accompagne sur vos projets digital.</p>
-              <h3>Événementiels, grands formats</h3>
-              <p>De la conception à la pose, Suruneligne vous accompagne sur l'organisation de vos évènements.</p>
+              <h1>L'agence</h1>
+              <h2>Notre éthique ?</h2>
+              <p>Pas de sous-traitance douteuse, ni de crowd-sourcing.<br />
+              Pas d’arrangements avec d’autres prestataires pour le bien de notre portefeuille, notre seul intérêt : votre projet.<br />
+              Nous entretenons une relation et collaboration positive, réactive, fluide et en souplesse avec vous et pour vous.<br />
+              Une prise en charge globale de votre projet pour optimiser votre budget et vous offrir les services d’une véritable agence de communication.</p>
             </div>
 
             <?php include './inc/blocdroite.inc.php' ?>
